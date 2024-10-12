@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Question 15</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: 'Amaranth', sans-serif; /* Use the Google font */
+            margin: 0; /* Remove default margin */
+        }
+        .container {
+            background-color: white; /* White box */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+            text-align: center; /* Center text */
+            width: 350px; /* Set width of the box */
+        }
+        .heading {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .question {
+            margin-bottom: 10px; /* Adjust spacing between questions */
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%; /* Responsive input width */
+            margin-bottom: 10px;
+            border: 1px solid #ccc; /* Border for the input field */
+            border-radius: 4px; /* Rounded corners */
+        }
+        input[type="button"] {
+            padding: 10px 15px;
+            background-color: #007bff; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        #nextque {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007bff; 
+        }
+        #nextque:hover {
+            text-decoration: underline; 
+        }
+        #treasure {
+            margin-top: 10px; 
+        }
+    </style>
+    <script>
+        function treasurefunc() {
+            var ans = document.forms["myForm"]["answer"].value;
+            var code = "ww";
+            ans = ans.split(" ").join(""); 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    if (ans === "world") {
+                code = "C";
+                document.getElementById("treasure").innerHTML = code;
+                document.getElementById('nextque').innerHTML = "Next Question";
+                document.getElementById("nextque").href = "final.html";
+            } else {
+                code = "Wrong Answer !!!Refresh the page and try answering again";
+                document.getElementById("treasure").innerHTML = code;
+                document.getElementById('nextque').innerHTML = "";
+                document.getElementById("nextque").href = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Question 15</h2>
+        <p>The following message has been encrypted using a Caesar cipher with a shift of 3. Can you decrypt the message?
+<br>
+<br>
+           <b style="font-size:1cm">zruog</b></p>
+        <form name="myForm">
+            <input type="text" name="answer" placeholder="Type your answer here">
+            <input type="button" value="Submit" onclick="treasurefunc()">
+        </form>
+        <p id="treasure"></p>
+        <a id="nextque"></a>
+    </div>
+</body>
+</html>

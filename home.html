@@ -1,0 +1,326 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt - Happy IEEE Day</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        header {
+            background-color: #004d7a;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .ieee-logo {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 15px;
+        }
+
+        .ieee-logo img {
+            width: 60px;
+            height: auto;
+        }
+
+        .middle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            gap: 2cm; /* Gap between the divisions */
+        }
+
+        .image-container img, .instructions {
+            width: 15cm; /* Set width to 15cm */
+            height: 15cm; /* Set height to 15cm */
+        }
+
+        /* Style for the instruction box */
+        .instructions {
+            background-color: #e3e4e8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .btn-start {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background-color: #ff9800;
+            color: white;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-start:hover {
+            background-color: #e67e22;
+        }
+
+        /* Falling Coins Effect */
+        .coin {
+            position: absolute;
+            top: -50px; /* Start off the top of the page */
+            width: 40px; /* Adjust coin size */
+            height: 40px;
+            background-image: url('coin.png'); /* Path to your coin image */
+            background-size: cover;
+            animation: fall 5s linear infinite;
+        }
+
+        /* Falling animation */
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg); /* Start off the top */
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg); /* Fall to the bottom */
+            }
+        }
+
+        /* Randomization of fall positions */
+        .coin:nth-child(odd) {
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            left: calc(10% * var(--x));
+        }
+
+        .coin:nth-child(even) {
+            animation-duration: 6s;
+            animation-timing-function: ease-in-out;
+            left: calc(90% * var(--x));
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Happy IEEE Day</h1>
+        <div class="ieee-logo">
+            <img src="ieee.png" alt="IEEE Logo">
+        </div>
+    </header>
+
+    <div class="middle-container">
+        <div class="image-container">
+            <img src="homebg.png" alt="Treasure Hunt Background">
+        </div>
+
+        <div class="instructions">
+            <br>
+            <br>
+            <br>
+            <h2>Instructions</h2>
+            <ul>
+                <li>Welcome to the Treasure Hunt!</li>
+                <li>Follow the clues and solve the puzzles.</li>
+                <li>Each correct answer takes you to the next level.</li>
+                <li>Remember, time is of the essence!</li>
+                <li>Enjoy the challenge and may the best hunter win!</li>
+                <li><h3><b>*Collect the code you get from answering the questions</b></h3></li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="que1.html" class="btn-start">START THE HUNT</a>
+    <br><br><br>
+
+    <div class="coins-container">
+        <div class="coin" style="--x:1;"></div>
+        <div class="coin" style="--x:2;"></div>
+        <div class="coin" style="--x:3;"></div>
+        <div class="coin" style="--x:4;"></div>
+        <div class="coin" style="--x:2;"></div>
+        <div class="coin" style="--x:3;"></div>
+        <div class="coin" style="--x:4;"></div>
+        <div class="coin" style="--x:5;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:1;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:1;"></div>
+        <div class="coin" style="--x:2;"></div>
+        <div class="coin" style="--x:3;"></div>
+        <div class="coin" style="--x:4;"></div>
+        <div class="coin" style="--x:5;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:5;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:1;"></div>
+        <div class="coin" style="--x:2;"></div>
+        <div class="coin" style="--x:3;"></div>
+        <div class="coin" style="--x:4;"></div>
+        <div class="coin" style="--x:5;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:14;"></div>
+        <div class="coin" style="--x:15;"></div>
+        <div class="coin" style="--x:1;"></div>
+        <div class="coin" style="--x:2;"></div>
+        <div class="coin" style="--x:3;"></div>
+        <div class="coin" style="--x:4;"></div>
+        <div class="coin" style="--x:5;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:14;"></div>
+        <div class="coin" style="--x:15;"></div>
+        <div class="coin" style="--x:1;"></div>
+        <div class="coin" style="--x:2;"></div>
+        <div class="coin" style="--x:3;"></div>
+        <div class="coin" style="--x:4;"></div>
+        <div class="coin" style="--x:5;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:14;"></div>
+        <div class="coin" style="--x:15;"></div>
+        <div class="coin" style="--x:1;"></div>
+        <div class="coin" style="--x:2;"></div>
+        <div class="coin" style="--x:3;"></div>
+        <div class="coin" style="--x:4;"></div>
+        <div class="coin" style="--x:5;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:6;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:7;"></div>
+        <div class="coin" style="--x:8;"></div>
+        <div class="coin" style="--x:9;"></div>
+        <div class="coin" style="--x:10;"></div>
+        <div class="coin" style="--x:11;"></div>
+        <div class="coin" style="--x:12;"></div>
+        <div class="coin" style="--x:13;"></div>
+        <div class="coin" style="--x:14;"></div>
+        <div class="coin" style="--x:15;"></div>
+    </div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+

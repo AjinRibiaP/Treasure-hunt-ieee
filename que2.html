@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>    
+    <title>Question 2</title>
+    <style>
+        /* Basic reset */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            background-color: #f4f4f9; /* Light gray background */
+        }
+
+        /* Box container */
+        .container {
+            background-color: white; /* White background for the box */
+            padding: 20px; /* Space inside the box */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            width: 300px; /* Width of the box */
+            text-align: center; /* Center text alignment */
+            height: 10cm;
+            width:10cm;
+        }
+
+        /* Heading styles */
+        .heading {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* Question styles */
+        .question {
+            font-size: 1.2rem;
+            margin: 5px 0; /* Space between questions */
+        }
+
+        /* Input and button styles */
+        input[type="text"] {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 10px; /* Space inside the input */
+            margin-bottom: 10px; /* Space below the input */
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        input[type="button"] {
+            padding: 10px 15px; /* Space inside the button */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white; /* White text color */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+    </style>
+    <script>
+        function treasurefunc(){
+            var ans = document.forms["myForm"]["answer"].value;
+            ans = ans.split(" ").join("").toLowerCase(); // Removing spaces and converting to lowercase
+            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              if (ans === "ieee") { // Checking if answer is 'ieee'
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        document.getElementById("treasure").innerHTML = "E";
+                document.getElementById('nextque').innerHTML = "Next Question";
+                document.getElementById("nextque").href = "que3.html";
+            } else {
+                document.getElementById("treasure").innerHTML = "Wrong Answer !!!Refresh the page and try answering again";
+                document.getElementById('nextque').innerHTML = "";
+                document.getElementById("nextque").href = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <p class="heading" style="font-size:1cm;">Question 2</p>
+        <p class="question">Translate the morse code</p>
+        <p class="question">.. . . . /</p> <!-- Morse code for 'IEEE' -->
+        <form name="myForm">
+            <input type="text" name="answer" placeholder="Enter your answer here">
+            <input type="button" value="Submit" onclick="treasurefunc()">
+        </form>
+        <p id="treasure"></p>
+        <a id="nextque"></a>
+    </div>
+</body>
+</html>

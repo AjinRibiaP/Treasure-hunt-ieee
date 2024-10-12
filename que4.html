@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>    
+    <title>Question 4</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: 'Amaranth', sans-serif; /* Use the Google font */
+            margin: 0; /* Remove default margin */
+        }
+        .container {
+            background-color: white; /* White box */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+            text-align: center; /* Center text */
+            width: 300px; /* Set width of the box */
+        }
+        .heading {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%; /* Responsive input width */
+            margin-bottom: 10px;
+            border: 1px solid #ccc; /* Border for the input field */
+            border-radius: 4px; /* Rounded corners */
+        }
+        input[type="button"] {
+            padding: 10px 15px;
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        #nextque {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007bff; /* Link color */
+        }
+        #nextque:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+    <script>
+        function treasurefunc() {
+            var ans = document.forms["myForm"]["answer"].value;
+            var code = "ww";
+            ans = ans.split(" ").join("");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    if (ans.toLowerCase() == "charminar") {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       code = "W";
+                document.getElementById("treasure").innerHTML = code;
+                document.getElementById('nextque').innerHTML = "Next Question";
+                document.getElementById("nextque").href = "que5.html";
+            } else {
+                code = "Wrong Answer !!!Refresh the page and try answering again";
+                document.getElementById("treasure").innerHTML = code;
+                document.getElementById('nextque').innerHTML = "";
+                document.getElementById("nextque").href = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <p class="heading">Question 4</p>
+        <p class="question">What's this Landmark<br> 17°21'41.7"N 78°28'28.6"E?</p>
+        <form name="myForm">
+            <input type="text" name="answer" placeholder="Type your answer here">
+            <input type="button" value="Submit" onclick="treasurefunc()">
+        </form>
+        <p id="treasure"></p>
+        <a id="nextque"></a>
+    </div>
+</body>
+</html>
